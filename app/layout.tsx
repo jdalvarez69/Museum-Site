@@ -32,31 +32,31 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[--paper] text-[--ink]">
         {/* Site Header */}
         <header className="border-b border-[--rule] bg-[--ink] text-[--paper]">
-          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <Link
               href="/"
               className="text-xs font-semibold tracking-[0.2em] uppercase hover:text-[--red] transition-colors"
             >
               Museum of Cold War Propaganda
             </Link>
-            <nav className="flex items-center gap-8">
+            <nav className="flex flex-wrap items-center gap-6 md:gap-8">
               <Link
                 href="/exhibit/posters"
-                className="text-xs tracking-widest uppercase hover:text-[--red] transition-colors"
+                className="text-xs tracking-[0.18em] uppercase hover:text-[--red] transition-colors"
               >
-                Exhibit I
+                Gallery I
               </Link>
               <Link
                 href="/exhibit/broadcast"
-                className="text-xs tracking-widest uppercase hover:text-[--red] transition-colors"
+                className="text-xs tracking-[0.18em] uppercase hover:text-[--red] transition-colors"
               >
-                Exhibit II
+                Gallery II
               </Link>
               <Link
                 href="/process"
-                className="text-xs tracking-widest uppercase hover:text-[--red] transition-colors"
+                className="text-xs tracking-[0.18em] uppercase hover:text-[--red] transition-colors"
               >
-                Process
+                Process Room
               </Link>
             </nav>
           </div>
@@ -67,12 +67,12 @@ export default function RootLayout({
 
         {/* Site Footer */}
         <footer className="border-t border-[--rule] bg-[--ink] text-[--paper]">
-          <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-            <span className="text-xs tracking-widest uppercase text-[--muted]">
+          <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+            <span className="text-xs tracking-[0.18em] uppercase text-[--paper]/70">
               Museum of Cold War Propaganda
             </span>
-            <span className="text-xs tracking-widest uppercase text-[--muted]">
-              History of Media · Spring 2026
+            <span className="text-xs tracking-[0.18em] uppercase text-[--paper]/50">
+              Midterm Review Edition · History of Media · Spring 2026
             </span>
           </div>
         </footer>

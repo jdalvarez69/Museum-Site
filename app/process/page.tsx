@@ -126,9 +126,34 @@ export default function ProcessPage() {
           <p className="max-w-2xl text-base text-[--paper]/80 leading-relaxed">
             This page documents how the project was directed, reviewed, and
             revised. For this course, process is part of the argument: the site
-            must demonstrate not only visual output, but disciplined decision-
-            making under clear constraints.
+            must demonstrate not only visual output, but disciplined
+            decision-making under clear constraints.
           </p>
+        </div>
+      </div>
+
+      <div className="border-b border-[--rule] px-6 py-12 bg-[--paper]">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
+              Room Guide
+            </p>
+            <p className="text-sm text-[--muted] leading-relaxed max-w-xl">
+              This room explains how the exhibition was planned, reviewed, and
+              revised. It is part of the project evidence, not supplemental
+              developer notes.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
+              Review Standard
+            </p>
+            <p className="text-sm text-[--muted] leading-relaxed max-w-xl">
+              The site was evaluated both as a functioning website and as a
+              curated educational exhibition, with process documentation used to
+              connect intent, revision, and outcome.
+            </p>
+          </div>
         </div>
       </div>
 

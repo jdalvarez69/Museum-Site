@@ -11,7 +11,7 @@ const artifacts: BroadcastArtifact[] = [
   {
     name: "Radio Moscow World Service",
     operator: "Soviet State Radio",
-    years: "1929 – 1991",
+    years: "1929 / Cold War role 1947 – 1991",
     target: "Global audiences; priority targeting of Western Europe, Latin America, Africa, and Asia",
     origin: "USSR",
     analysis:
@@ -72,7 +72,7 @@ export default function BroadcastExhibit() {
       <div className="bg-[--ink] text-[--paper] px-6 py-20">
         <div className="max-w-6xl mx-auto">
           <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
-            Gallery II — Transnational Signals, 1929 to 1991
+            Gallery II — Broadcast Persuasion, 1942 to 1991
           </p>
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none mb-8">
             The Airwaves War
@@ -99,7 +99,9 @@ export default function BroadcastExhibit() {
               Read this timeline as a sequence of broadcasting strategies.
               Early entries focus on transmitting across borders; later entries
               show how the same logic extends into domestic television,
-              clandestine stations, and mass psychological operations.
+              clandestine stations, and mass psychological operations. The
+              opening case begins before 1947 to show the infrastructure the
+              Cold War inherited.
             </p>
           </div>
           <div>

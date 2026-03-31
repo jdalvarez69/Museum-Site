@@ -16,7 +16,8 @@ export default function Home() {
             This exhibition studies how the United States and Soviet Union used
             print and broadcast media to organize belief, discipline perception,
             and legitimize state authority. The collection is arranged as a
-            comparative study in persuasion mechanics, not a patriotic archive.
+            comparative study in persuasion mechanics, with emphasis on the
+            Cold War period and the media systems that sustained it.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <Link
@@ -100,18 +101,24 @@ export default function Home() {
             Visitor Context
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div>
-            <p className="text-xs tracking-widest uppercase text-[--red] mb-3">Chronology</p>
-            <p className="text-2xl font-bold">1947–1991</p>
-          </div>
-          <div>
-            <p className="text-xs tracking-widest uppercase text-[--red] mb-3">Collection Scope</p>
-            <p className="text-2xl font-bold">14 Primary Sources</p>
-          </div>
-          <div>
-            <p className="text-xs tracking-widest uppercase text-[--red] mb-3">Comparative Frame</p>
-            <p className="text-2xl font-bold">US &amp; Soviet Union</p>
-          </div>
+            <div>
+              <p className="text-xs tracking-[0.18em] uppercase text-[--red] mb-3">
+                Historical Frame
+              </p>
+              <p className="text-2xl font-bold">Cold War, 1947–1991</p>
+            </div>
+            <div>
+              <p className="text-xs tracking-[0.18em] uppercase text-[--red] mb-3">
+                Collection Scope
+              </p>
+              <p className="text-2xl font-bold">14 Primary Objects</p>
+            </div>
+            <div>
+              <p className="text-xs tracking-[0.18em] uppercase text-[--red] mb-3">
+                Comparative Frame
+              </p>
+              <p className="text-2xl font-bold">US &amp; Soviet Union</p>
+            </div>
           </div>
         </div>
       </section>
