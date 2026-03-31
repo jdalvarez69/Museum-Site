@@ -51,54 +51,289 @@ const sources = [
   },
 ];
 
+const workflowSteps = [
+  {
+    step: "Spec",
+    detail:
+      "A foundation specification established scope, tone, page structure, design constraints, and acceptance criteria before implementation began.",
+  },
+  {
+    step: "QA",
+    detail:
+      "The spec was reviewed for ambiguity, scope creep, and vague acceptance criteria so the project would not drift during execution.",
+  },
+  {
+    step: "Sprint",
+    detail:
+      "A bounded Sprint 1 document translated the spec into a realistic midterm build plan tied to the current route structure and deliverables.",
+  },
+  {
+    step: "QA",
+    detail:
+      "The first-review version was assessed as both a website and a museum exhibition, focusing on narrative flow, exhibit organization, artifact presentation, educational value, visual coherence, and visitor experience.",
+  },
+  {
+    step: "Implement",
+    detail:
+      "Pages, shared components, and design tokens were revised directly against the documents instead of through open-ended iteration.",
+  },
+  {
+    step: "QA",
+    detail:
+      "A final midterm QA pass documented what was already defensible, what still felt unfinished, and what should be improved before final review.",
+  },
+];
+
+const processArtifacts = [
+  {
+    name: "spec.md",
+    path: "docs/_specs/site-foundation/spec.md",
+    purpose:
+      "Defines the foundation of the project: scope, design framework, content boundaries, and measurable acceptance criteria.",
+  },
+  {
+    name: "sprint-1.md",
+    path: "docs/_specs/site-foundation/sprint-1.md",
+    purpose:
+      "Records the intended Sprint 1 deliverable as a respectable midterm build rather than a final museum product.",
+  },
+  {
+    name: "qa-1.md",
+    path: "docs/_specs/site-foundation/qa-1.md",
+    purpose:
+      "Provides an honest review of strengths, unfinished areas, and highest-priority improvements before final review.",
+  },
+  {
+    name: "README.md",
+    path: "README.md",
+    purpose:
+      "Summarizes the project, design framework, and orchestration logic for class submission and repository review.",
+  },
+];
+
 export default function ProcessPage() {
   return (
     <div>
-      {/* Page Header */}
       <div className="bg-[--ink] text-[--paper] px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
-            Process & Methodology
+            Process Room — Method, Review, and Orchestration
           </p>
           <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight leading-none mb-8">
             Making the Exhibition
           </h1>
-          <div className="w-16 h-1 bg-[--red]" />
+          <div className="w-16 h-1 bg-[--red] mb-8" />
+          <p className="max-w-2xl text-base text-[--paper]/80 leading-relaxed">
+            This page documents how the project was directed, reviewed, and
+            revised. For this course, process is part of the argument: the site
+            must demonstrate not only visual output, but disciplined decision-
+            making under clear constraints.
+          </p>
         </div>
       </div>
 
       <div className="px-6 py-16">
         <div className="max-w-4xl mx-auto flex flex-col gap-16">
-          {/* Project Statement */}
           <section>
             <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
-              Project Statement
+              Why a Spec-Driven Workflow Was Used
             </p>
-            <div className="prose-like flex flex-col gap-4 text-[--ink]">
+            <div className="flex flex-col gap-4 text-[--ink]">
               <p className="text-base leading-relaxed">
-                I chose Cold War propaganda as the subject of this project
-                because I wanted to study persuasion in a context where its
-                mechanisms were unusually transparent. Governments rarely
-                announce what they are doing when they attempt to shape public
-                belief — but the declassified archives of the Cold War period
-                provide unusually direct documentation of intent, method, and
-                measured effect. The machinery was built in public, used in
-                secret, and studied afterward with a rigor that peacetime
-                commercial messaging has rarely attracted.
+                The project used a spec-driven workflow because AI assistance is
+                only useful when the boundaries are clear. Without a written
+                spec, page structure, tone, scope, and interpretive goals can
+                drift quickly, especially in a project that combines design,
+                history, and argument.
               </p>
               <p className="text-base leading-relaxed">
-                The goal of this exhibition is not to produce condemnation of
-                either superpower, nor to suggest a false equivalence between
-                democratic and authoritarian systems. It is to isolate the
-                structural techniques — fear, authority, binary opposition,
-                repetition, surrogate identity — and make them visible as
-                techniques, so that they can be recognized in contexts beyond
-                their historical origin.
+                In this case, the workflow was designed to keep the site aligned
+                to a museum-exhibition concept rather than allowing it to become
+                a generic content website. The spec defined what the project was
+                trying to prove, the QA passes identified where that proof was
+                weak, and the sprint document kept the midterm version bounded
+                enough to finish credibly.
               </p>
             </div>
           </section>
 
-          {/* Research Sources */}
+          <section>
+            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
+              Orchestration Sequence
+            </p>
+            <div className="grid grid-cols-1 gap-px bg-[--rule]">
+              {workflowSteps.map((item, index) => (
+                <div key={`${item.step}-${index}`} className="bg-[--paper] p-6">
+                  <div className="flex items-baseline gap-3 mb-3">
+                    <span className="text-[10px] tracking-[0.18em] uppercase text-[--muted]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="text-sm font-bold uppercase tracking-tight">
+                      {item.step}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-[--ink] leading-relaxed max-w-3xl">
+                    {item.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
+              How This Reduced Drift
+            </p>
+            <div className="flex flex-col gap-6">
+              <div className="border-l-2 border-[--rule] pl-5">
+                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
+                  Scope Control
+                </p>
+                <p className="text-sm leading-relaxed text-[--ink]">
+                  The written spec limited the project to four core routes and
+                  defined what belonged in the midterm review version. That
+                  prevented feature creep and kept the AI work focused on the
+                  pages that mattered most for evaluation.
+                </p>
+              </div>
+              <div className="border-l-2 border-[--rule] pl-5">
+                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
+                  Tone and Design Discipline
+                </p>
+                <p className="text-sm leading-relaxed text-[--ink]">
+                  The workflow also constrained tone. Because the project was
+                  specified as Swiss, Authority, and Sage, revisions could be
+                  judged against an explicit standard instead of personal taste
+                  alone.
+                </p>
+              </div>
+              <div className="border-l-2 border-[--rule] pl-5">
+                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
+                  Review Against Intent
+                </p>
+                <p className="text-sm leading-relaxed text-[--ink]">
+                  QA was used to compare the implemented pages to the intended
+                  exhibition experience. This made it possible to revise pages
+                  not just for correctness, but for reading rhythm, narrative
+                  progression, and curatorial clarity.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
+              Project Artifacts Created
+            </p>
+            <div className="grid grid-cols-1 gap-px bg-[--rule]">
+              {processArtifacts.map((artifact) => (
+                <div key={artifact.path} className="bg-[--paper] p-6">
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+                    <h3 className="text-sm font-bold uppercase tracking-tight">
+                      {artifact.name}
+                    </h3>
+                    <span className="text-[11px] font-mono text-[--muted]">
+                      {artifact.path}
+                    </span>
+                  </div>
+                  <p className="text-sm text-[--ink] leading-relaxed">
+                    {artifact.purpose}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
+              How the Site Was Reviewed
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[--rule]">
+              {[
+                {
+                  name: "As a Website",
+                  reason:
+                    "The project was checked for route clarity, build stability, maintainability, and whether users could move through the site without friction.",
+                },
+                {
+                  name: "As an Exhibition",
+                  reason:
+                    "The same pages were also reviewed for narrative flow, exhibit organization, artifact presentation, educational value, visual coherence, and visitor reading rhythm.",
+                },
+              ].map((item) => (
+                <div key={item.name} className="bg-[--paper] p-6">
+                  <p className="text-sm font-bold uppercase tracking-tight mb-3">
+                    {item.name}
+                  </p>
+                  <p className="text-sm text-[--muted] leading-relaxed">
+                    {item.reason}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
+              What the Midterm Version Proves
+            </p>
+            <div className="flex flex-col gap-4 text-[--ink]">
+              <p className="text-base leading-relaxed">
+                The current midterm version proves that the project has moved
+                beyond concept stage. It has a working route structure, a
+                coherent design language, and a documented process showing that
+                decisions were made deliberately rather than improvised late in
+                development.
+              </p>
+              <p className="text-base leading-relaxed">
+                It also demonstrates that AI assistance can be used responsibly
+                in an academic project when the work is structured, reviewed,
+                and constrained. The result is not a finished museum site, but a
+                respectable first-review exhibition with a clear thesis and a
+                credible development record.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
+              What Still Needs Improvement
+            </p>
+            <div className="flex flex-col gap-6">
+              <div className="border-l-2 border-[--rule] pl-5">
+                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
+                  Content Refinement
+                </p>
+                <p className="text-sm leading-relaxed text-[--ink]">
+                  Some exhibit text still needs compression so the project reads
+                  more consistently like a gallery and less like an essay in
+                  sections.
+                </p>
+              </div>
+              <div className="border-l-2 border-[--rule] pl-5">
+                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
+                  Final Review Alignment
+                </p>
+                <p className="text-sm leading-relaxed text-[--ink]">
+                  The final version should more strictly align the implemented
+                  pages with the documentation, especially around copy limits,
+                  consistency of labels, and artifact-level citation signals.
+                </p>
+              </div>
+              <div className="border-l-2 border-[--rule] pl-5">
+                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
+                  Accessibility and Polish
+                </p>
+                <p className="text-sm leading-relaxed text-[--ink]">
+                  Before final review, the site should receive a focused pass on
+                  reading rhythm, mobile readability, and interface clarity so
+                  the exhibition experience feels complete rather than merely
+                  functional.
+                </p>
+              </div>
+            </div>
+          </section>
+
           <section>
             <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
               Research Sources
@@ -120,120 +355,6 @@ export default function ProcessPage() {
                   </p>
                 </div>
               ))}
-            </div>
-          </section>
-
-          {/* Design Decisions */}
-          <section>
-            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
-              Design Decisions
-            </p>
-            <div className="flex flex-col gap-6">
-              <div className="border-l-2 border-[--rule] pl-5">
-                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
-                  Swiss International Style
-                </p>
-                <p className="text-sm leading-relaxed text-[--ink]">
-                  The visual language of this site is drawn from the Swiss
-                  International Typographic Style — the same modernist design
-                  movement active during the Cold War era itself. Grid-based
-                  layout, grotesque typefaces, and a restricted color palette
-                  (black, off-white, and a single accent red) reference the
-                  period visually without imitation. The austerity of the design
-                  is intentional: the artifacts should carry visual weight, not
-                  the interface.
-                </p>
-              </div>
-              <div className="border-l-2 border-[--rule] pl-5">
-                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
-                  Color Palette
-                </p>
-                <p className="text-sm leading-relaxed text-[--ink]">
-                  Near-black (#0A0A0A), warm parchment (#F7F4EE), and
-                  propaganda red (#C41E3A). Red is used exclusively as a signal
-                  color — labels, rules, accent lines — and never as background.
-                  The warm paper tone references archival documents and avoids
-                  the harshness of pure white on screen.
-                </p>
-              </div>
-              <div className="border-l-2 border-[--rule] pl-5">
-                <p className="text-xs tracking-widest uppercase text-[--muted] mb-2">
-                  Layout Logic
-                </p>
-                <p className="text-sm leading-relaxed text-[--ink]">
-                  Each page uses a full-bleed dark header to establish exhibit
-                  context, followed by a light content field for primary
-                  material. This two-zone structure mimics the physical
-                  experience of entering a gallery: threshold, then encounter.
-                  The poster grid uses 4 columns at wide breakpoints to maximize
-                  artifact density without crowding analysis text.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Technical Stack */}
-          <section>
-            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
-              Technical Stack
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[--rule]">
-              {[
-                {
-                  name: "Next.js 15",
-                  reason:
-                    "App Router enables per-page layouts and server components, which keep the artifact data co-located with the page rather than in a separate API layer — appropriate for a static exhibition without backend requirements.",
-                },
-                {
-                  name: "TypeScript",
-                  reason:
-                    "Typed interfaces for artifact data (ArtifactCard props, broadcast artifact objects) prevent structural errors during rapid development and make the data schema self-documenting.",
-                },
-                {
-                  name: "Tailwind CSS",
-                  reason:
-                    "Utility-first CSS enabled fast iteration on the grid layout and spacing system. CSS custom properties handle the color tokens, keeping design variables accessible from both Tailwind classes and raw CSS without duplication.",
-                },
-              ].map((tech) => (
-                <div key={tech.name} className="bg-[--paper] p-6">
-                  <p className="text-sm font-bold uppercase tracking-tight mb-3">
-                    {tech.name}
-                  </p>
-                  <p className="text-sm text-[--muted] leading-relaxed">
-                    {tech.reason}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Reflection */}
-          <section>
-            <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
-              Reflection
-            </p>
-            <div className="flex flex-col gap-4 text-[--ink]">
-              <p className="text-base leading-relaxed">
-                The most clarifying moment in this project came while reading
-                declassified documents about Radio Free Europe's editorial
-                guidelines. The CIA's insistence that the station maintain
-                journalistic credibility — including reporting facts that
-                reflected poorly on U.S. foreign policy — was not idealism. It
-                was a calculated investment in the authority that accurate
-                reporting generates. The propaganda was more effective because
-                it was largely true. That inversion of expectation — that
-                honesty can be a technique — is the central insight I carry away
-                from this research.
-              </p>
-              <p className="text-base leading-relaxed">
-                Building the exhibition as a website rather than a written essay
-                forced compression. Every artifact analysis had to do its work
-                in three sentences. That constraint was more useful than a
-                thousand-word minimum would have been. Writing for a wall label
-                is a different discipline than writing for a seminar paper, and
-                the discipline clarified which claims could survive without
-                qualification and which could not.
-              </p>
             </div>
           </section>
         </div>
