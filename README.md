@@ -99,30 +99,51 @@ docs/
 			qa-1.md
 ```
 
-## 10. Local Development Instructions
+## 10. How to Access the Site
 
-1. Install dependencies:
+### Option A: Run locally (for anyone cloning this repo)
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/jdalvarez69/Museum-Site.git
+cd Museum-Site
+```
+
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Run development server:
+3. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-3. Build for production verification:
+4. Open the site in a browser:
+
+`http://localhost:3000`
+
+5. (Optional) Verify production build:
 
 ```bash
 npm run build
 ```
 
-4. Open in browser:
+### Option B: Access a live hosted version
 
-`http://localhost:3000`
+The GitHub repository by itself does not automatically host this Next.js app.
+To make a public URL that anyone can open without running code locally:
+
+1. Import this repo into Vercel
+2. Keep default Next.js settings
+3. Deploy and share the generated URL (for example: `https://museum-site-...vercel.app`)
+
+If no deployment URL is listed below yet, visitors should use Option A.
 
 ## 11. GitHub Repository Link Placeholder
 
-GitHub Repository: `https://github.com/<your-username>/<your-repo-name>`
+GitHub Repository: `https://github.com/jdalvarez69/Museum-Site`
+Live URL (add after deployment): `https://<your-vercel-url>`
