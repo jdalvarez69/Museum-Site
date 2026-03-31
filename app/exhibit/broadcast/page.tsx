@@ -4,6 +4,7 @@ interface BroadcastArtifact {
   years: string;
   target: string;
   analysis: string;
+  sourceContext: string;
   origin: "US" | "USSR";
 }
 
@@ -16,6 +17,7 @@ const artifacts: BroadcastArtifact[] = [
     origin: "USSR",
     analysis:
       "Radio Moscow framed the USSR as the anti-colonial alternative to Western power. It translated Soviet ideology into a language of peace, development, and historical justice.",
+    sourceContext: "Soviet broadcast archives and multilingual transmission records",
   },
   {
     name: "Voice of America",
@@ -25,6 +27,7 @@ const artifacts: BroadcastArtifact[] = [
     origin: "US",
     analysis:
       "Unlike covert stations, Voice of America drew credibility from declared authorship. Its persuasive force came from presenting openness itself as proof of democratic legitimacy.",
+    sourceContext: "VOA Charter documentation and U.S. Information Agency records",
   },
   {
     name: "Radio Free Europe",
@@ -35,6 +38,7 @@ const artifacts: BroadcastArtifact[] = [
     origin: "US",
     analysis:
       "Radio Free Europe's authority depended on sounding local rather than American. It persuaded by imitating the independent press Soviet-bloc listeners had been denied.",
+    sourceContext: "Declassified CIA funding files and RFE/RL institutional histories",
   },
   {
     name: "Psychological Warfare Leaflet Operations",
@@ -44,6 +48,7 @@ const artifacts: BroadcastArtifact[] = [
     origin: "US",
     analysis:
       "Though printed, these leaflet drops behaved like broadcast media: they reached mass audiences at once and aimed for immediate psychological effect. Their power lay in compression, repetition, and institutional authority.",
+    sourceContext: "U.S. military psychological operations summaries (Korea and Vietnam)",
   },
   {
     name: "Radio Swan / Radio Americas",
@@ -53,6 +58,7 @@ const artifacts: BroadcastArtifact[] = [
     origin: "US",
     analysis:
       "Radio Swan demonstrates the covert end of the spectrum: a station designed to conceal state authorship while issuing operational and psychological instructions. Here secrecy was part of the message's credibility.",
+    sourceContext: "Bay of Pigs-era declassified CIA communications records",
   },
   {
     name: "Vremena (Times) / Moscow Television",
@@ -62,6 +68,7 @@ const artifacts: BroadcastArtifact[] = [
     origin: "USSR",
     analysis:
       "If radio crossed borders, television stabilized the interior. Vremena functioned as a nightly ritual of state competence, making political order appear continuous and unquestionable.",
+    sourceContext: "Soviet state television programming studies and media analyses",
   },
 ];
 
@@ -193,6 +200,12 @@ export default function BroadcastExhibit() {
                       </p>
                       <p className="text-[13px] leading-relaxed">{a.target}</p>
                     </div>
+                    <div className="sm:col-span-2">
+                      <p className="text-[10px] tracking-[0.18em] uppercase text-[--muted] mb-1">
+                        Source Context
+                      </p>
+                      <p className="text-[13px] leading-relaxed">{a.sourceContext}</p>
+                    </div>
                   </div>
 
                   <div className="w-8 h-px bg-[--red] mb-4" />
@@ -203,6 +216,20 @@ export default function BroadcastExhibit() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      <div className="border-t border-[--rule] px-6 py-12 bg-[--paper]">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
+            Selected Source Context
+          </p>
+          <p className="text-sm text-[--muted] leading-relaxed">
+            Timeline entries synthesize Cold War broadcasting scholarship,
+            declassified CIA records, VOA/RFE documentation, and Soviet media
+            studies. Labels are interpretive summaries grounded in those
+            archival and research sources.
+          </p>
         </div>
       </div>
 

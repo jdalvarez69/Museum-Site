@@ -5,7 +5,7 @@ const sources = [
     year: "1965",
     publisher: "Vintage Books",
     note:
-      "The foundational academic text on propaganda as a sociological phenomenon. Ellul's argument that propaganda is inseparable from modern technological society — rather than an aberration from it — informed the framing of both exhibits.",
+      "Foundational theory for treating propaganda as a structural social system, not an isolated event.",
   },
   {
     title: "Cold War Broadcasting: Impact on the Soviet Union and Eastern Europe",
@@ -13,7 +13,7 @@ const sources = [
     year: "2010",
     publisher: "Central European University Press",
     note:
-      "A comprehensive academic study of Radio Free Europe and Voice of America, drawing on declassified CIA documents and Eastern European archives. Primary source for the broadcast exhibit.",
+      "Primary scholarly source for the broadcast gallery, grounded in declassified records and regional archives.",
   },
   {
     title: "Posters of the Cold War",
@@ -21,7 +21,7 @@ const sources = [
     year: "2008",
     publisher: "V&A Publishing",
     note:
-      "The most thorough visual survey of Cold War poster design from both sides. Used to identify artifacts and understand the formal conventions of each superpower's visual propaganda language.",
+      "Visual reference for poster selection and comparative design language across both blocs.",
   },
   {
     title:
@@ -30,7 +30,7 @@ const sources = [
     year: "1948 – 1975 (declassified 1990s–2000s)",
     publisher: "CIA.gov",
     note:
-      "Declassified operational documents confirming CIA funding of Radio Free Europe and Radio Swan. Used to verify claims about covert sponsorship in the broadcast exhibit narrative.",
+      "Declassified records used to verify covert sponsorship claims in the broadcast timeline.",
   },
   {
     title: "Prints & Photographs Online Catalog — World War II Posters",
@@ -38,7 +38,7 @@ const sources = [
     year: "1941 – 1945",
     publisher: "loc.gov",
     note:
-      "Primary source for public domain poster images and metadata. The Library of Congress catalog provided authorship, date, and distribution context for all U.S. propaganda posters in Exhibit I.",
+      "Primary metadata source for U.S. poster authorship, dates, and distribution context.",
   },
   {
     title:
@@ -47,7 +47,7 @@ const sources = [
     year: "1988",
     publisher: "Pantheon Books",
     note:
-      "Herman and Chomsky's 'propaganda model' provided the theoretical lens for the process page reflection. The argument that democratic media systems exhibit structural propaganda functions comparable to authoritarian ones shaped the closing notes of both exhibits.",
+      "Theoretical frame for analyzing how media systems can reproduce propaganda functions across political contexts.",
   },
 ];
 
@@ -55,32 +55,32 @@ const workflowSteps = [
   {
     step: "Spec",
     detail:
-      "A foundation specification established scope, tone, page structure, design constraints, and acceptance criteria before implementation began.",
+      "Defined scope, tone, page roles, design constraints, and acceptance criteria before implementation.",
   },
   {
     step: "QA",
     detail:
-      "The spec was reviewed for ambiguity, scope creep, and vague acceptance criteria so the project would not drift during execution.",
+      "Audited the spec for ambiguity, scope creep, and weak criteria before build work.",
   },
   {
     step: "Sprint",
     detail:
-      "A bounded Sprint 1 document translated the spec into a realistic midterm build plan tied to the current route structure and deliverables.",
+      "Converted the spec into a realistic Sprint 1 plan tied to route-level deliverables.",
   },
   {
     step: "QA",
     detail:
-      "The first-review version was assessed as both a website and a museum exhibition, focusing on narrative flow, exhibit organization, artifact presentation, educational value, visual coherence, and visitor experience.",
+      "Reviewed the build as both website and exhibition: flow, organization, artifact presentation, educational value, and visual coherence.",
   },
   {
     step: "Implement",
     detail:
-      "Pages, shared components, and design tokens were revised directly against the documents instead of through open-ended iteration.",
+      "Revised pages and shared components against the documents, not open-ended iteration.",
   },
   {
     step: "QA",
     detail:
-      "A final midterm QA pass documented what was already defensible, what still felt unfinished, and what should be improved before final review.",
+      "Recorded what was defensible, what remained unfinished, and what to prioritize before final review.",
   },
 ];
 
@@ -89,25 +89,25 @@ const processArtifacts = [
     name: "spec.md",
     path: "docs/_specs/site-foundation/spec.md",
     purpose:
-      "Defines the foundation of the project: scope, design framework, content boundaries, and measurable acceptance criteria.",
+      "Foundation document for scope, design framework, content boundaries, and acceptance criteria.",
   },
   {
     name: "sprint-1.md",
     path: "docs/_specs/site-foundation/sprint-1.md",
     purpose:
-      "Records the intended Sprint 1 deliverable as a respectable midterm build rather than a final museum product.",
+      "Sprint record defining the intended midterm deliverable and its limits.",
   },
   {
     name: "qa-1.md",
     path: "docs/_specs/site-foundation/qa-1.md",
     purpose:
-      "Provides an honest review of strengths, unfinished areas, and highest-priority improvements before final review.",
+      "QA record of strengths, unfinished areas, and highest-priority fixes.",
   },
   {
     name: "README.md",
     path: "README.md",
     purpose:
-      "Summarizes the project, design framework, and orchestration logic for class submission and repository review.",
+      "Submission-facing summary of project goals, design framework, and orchestration logic.",
   },
 ];
 
@@ -168,16 +168,15 @@ export default function ProcessPage() {
                 The project used a spec-driven workflow because AI assistance is
                 only useful when the boundaries are clear. Without a written
                 spec, page structure, tone, scope, and interpretive goals can
-                drift quickly, especially in a project that combines design,
-                history, and argument.
+                drift quickly in a project that combines design, history, and
+                argument.
               </p>
               <p className="text-base leading-relaxed">
                 In this case, the workflow was designed to keep the site aligned
                 to a museum-exhibition concept rather than allowing it to become
-                a generic content website. The spec defined what the project was
-                trying to prove, the QA passes identified where that proof was
-                weak, and the sprint document kept the midterm version bounded
-                enough to finish credibly.
+                a generic content website. The spec set intent, QA exposed weak
+                spots, and sprint constraints kept the midterm version bounded
+                enough to complete credibly.
               </p>
             </div>
           </section>
@@ -217,8 +216,8 @@ export default function ProcessPage() {
                 <p className="text-sm leading-relaxed text-[--ink]">
                   The written spec limited the project to four core routes and
                   defined what belonged in the midterm review version. That
-                  prevented feature creep and kept the AI work focused on the
-                  pages that mattered most for evaluation.
+                  prevented feature creep and kept AI effort focused on
+                  evaluation-critical pages.
                 </p>
               </div>
               <div className="border-l-2 border-[--rule] pl-5">
@@ -228,8 +227,7 @@ export default function ProcessPage() {
                 <p className="text-sm leading-relaxed text-[--ink]">
                   The workflow also constrained tone. Because the project was
                   specified as Swiss, Authority, and Sage, revisions could be
-                  judged against an explicit standard instead of personal taste
-                  alone.
+                  judged against explicit criteria instead of taste alone.
                 </p>
               </div>
               <div className="border-l-2 border-[--rule] pl-5">
@@ -239,8 +237,8 @@ export default function ProcessPage() {
                 <p className="text-sm leading-relaxed text-[--ink]">
                   QA was used to compare the implemented pages to the intended
                   exhibition experience. This made it possible to revise pages
-                  not just for correctness, but for reading rhythm, narrative
-                  progression, and curatorial clarity.
+                  for reading rhythm, narrative progression, and curatorial
+                  clarity, not just correctness.
                 </p>
               </div>
             </div>
@@ -278,12 +276,12 @@ export default function ProcessPage() {
                 {
                   name: "As a Website",
                   reason:
-                    "The project was checked for route clarity, build stability, maintainability, and whether users could move through the site without friction.",
+                    "Checked for route clarity, build stability, maintainability, and visitor navigation flow.",
                 },
                 {
                   name: "As an Exhibition",
                   reason:
-                    "The same pages were also reviewed for narrative flow, exhibit organization, artifact presentation, educational value, visual coherence, and visitor reading rhythm.",
+                    "Assessed for narrative flow, exhibit organization, artifact presentation, educational value, and visual coherence.",
                 },
               ].map((item) => (
                 <div key={item.name} className="bg-[--paper] p-6">
@@ -302,22 +300,12 @@ export default function ProcessPage() {
             <p className="text-xs tracking-widest uppercase text-[--red] mb-6">
               What the Midterm Version Proves
             </p>
-            <div className="flex flex-col gap-4 text-[--ink]">
-              <p className="text-base leading-relaxed">
-                The current midterm version proves that the project has moved
-                beyond concept stage. It has a working route structure, a
-                coherent design language, and a documented process showing that
-                decisions were made deliberately rather than improvised late in
-                development.
-              </p>
-              <p className="text-base leading-relaxed">
-                It also demonstrates that AI assistance can be used responsibly
-                in an academic project when the work is structured, reviewed,
-                and constrained. The result is not a finished museum site, but a
-                respectable first-review exhibition with a clear thesis and a
-                credible development record.
-              </p>
-            </div>
+            <p className="text-base leading-relaxed text-[--ink] max-w-3xl">
+              The midterm version proves the project has moved beyond concept:
+              it has a working route structure, coherent design language, and a
+              documented process showing deliberate decisions. It is not a final
+              museum build, but a credible first formal review with clear intent.
+            </p>
           </section>
 
           <section>
@@ -342,7 +330,7 @@ export default function ProcessPage() {
                 <p className="text-sm leading-relaxed text-[--ink]">
                   The final version should more strictly align the implemented
                   pages with the documentation, especially around copy limits,
-                  consistency of labels, and artifact-level citation signals.
+                  label consistency, and artifact-level citation signals.
                 </p>
               </div>
               <div className="border-l-2 border-[--rule] pl-5">

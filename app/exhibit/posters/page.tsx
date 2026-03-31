@@ -7,7 +7,12 @@ const posters = [
     year: "1917 / reissued 1941",
     analysis:
       "Flagg's pointing figure converts the state into a personal authority speaking directly to the viewer. Its force lies in collapsing public duty into an individual summons.",
-    imageLabel: "James M. Flagg / U.S. Army",
+    creator: "James M. Flagg / U.S. Army",
+    medium: "Lithographic poster",
+    circulation: "National recruitment campaign",
+    repository: "Library of Congress",
+    accession: "MCWP-P-001",
+    archiveStatus: "Digitized record",
   },
   {
     title: "Build More Tanks",
@@ -15,7 +20,12 @@ const posters = [
     year: "1942",
     analysis:
       "This production image turns labor into patriotic proof. The worker is presented not as an individual but as a disciplined instrument of state strength.",
-    imageLabel: "TASS Windows Series",
+    creator: "TASS Windows Series",
+    medium: "Screenprint / poster",
+    circulation: "Factory and civic display",
+    repository: "Russian State Library (digital copy)",
+    accession: "MCWP-P-002",
+    archiveStatus: "Catalog reference",
   },
   {
     title: "This Is the Enemy",
@@ -23,7 +33,12 @@ const posters = [
     year: "1943",
     analysis:
       "The poster relies on caricature to make the enemy legible at a glance. Once the opponent is reduced to a type, moral complexity becomes easier to discard.",
-    imageLabel: "Office of War Information",
+    creator: "Office of War Information",
+    medium: "Offset poster",
+    circulation: "Public information campaign",
+    repository: "U.S. National Archives",
+    accession: "MCWP-P-003",
+    archiveStatus: "Digitized record",
   },
   {
     title: "The Communist Threat",
@@ -31,7 +46,12 @@ const posters = [
     year: "1950",
     analysis:
       "American anti-communist poster design often borrowed the authority of public health messaging. Here ideology is treated as contamination, making vigilance appear rational and necessary.",
-    imageLabel: "American Legion / Civil Defense",
+    creator: "American Legion / Civil Defense",
+    medium: "Mass-printed poster",
+    circulation: "Civic and school distribution",
+    repository: "American Heritage collections",
+    accession: "MCWP-P-004",
+    archiveStatus: "Attributed reproduction",
   },
   {
     title: "Peace to the World",
@@ -39,7 +59,12 @@ const posters = [
     year: "1950",
     analysis:
       "Soviet peace imagery framed the USSR as the guardian of world stability while preserving a militant visual grammar. The poster's persuasion lies in making state power appear synonymous with peace itself.",
-    imageLabel: "Soviet Peace Committee",
+    creator: "Soviet Peace Committee",
+    medium: "State propaganda poster",
+    circulation: "Party and union venues",
+    repository: "Soviet poster archives",
+    accession: "MCWP-P-005",
+    archiveStatus: "Catalog reference",
   },
   {
     title: "Duck and Cover",
@@ -47,7 +72,12 @@ const posters = [
     year: "1951",
     analysis:
       "Presented as child-friendly instruction, this campaign normalized permanent nuclear anxiety. The lesson was not only survival procedure but habitual reliance on official guidance.",
-    imageLabel: "Federal Civil Defense Administration",
+    creator: "Federal Civil Defense Administration",
+    medium: "Instructional poster",
+    circulation: "School and civil defense program",
+    repository: "Prelinger Archives",
+    accession: "MCWP-P-006",
+    archiveStatus: "Digitized record",
   },
   {
     title: "Rodina-Mat Zovyot (The Motherland Calls)",
@@ -55,7 +85,12 @@ const posters = [
     year: "1941 / circulated 1960s",
     analysis:
       "Toidze's figure fuses nation, motherhood, and command into a single image. Authority is embodied rather than explained, giving mobilization the force of moral obligation.",
-    imageLabel: "Irakli Toidze",
+    creator: "Irakli Toidze",
+    medium: "Lithographic poster",
+    circulation: "Mass wartime and commemorative circulation",
+    repository: "Russian State Library (digital copy)",
+    accession: "MCWP-P-007",
+    archiveStatus: "Digitized record",
   },
   {
     title: "Are You Doing All You Can?",
@@ -63,7 +98,12 @@ const posters = [
     year: "1942",
     analysis:
       "The rhetorical question functions as a quiet accusation. Viewers are asked to measure themselves against national duty before they have a chance to refuse it.",
-    imageLabel: "U.S. Government Printing Office",
+    creator: "U.S. Government Printing Office",
+    medium: "Offset poster",
+    circulation: "Transit and workplace display",
+    repository: "Library of Congress",
+    accession: "MCWP-P-008",
+    archiveStatus: "Digitized record",
   },
 ];
 
@@ -120,11 +160,11 @@ export default function PostersExhibit() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col gap-3 mb-10">
             <p className="text-xs tracking-[0.25em] uppercase text-[--muted]">
-              Selected Objects — 8 Posters
+              Cataloged Objects — 8 Posters
             </p>
             <p className="max-w-2xl text-sm text-[--muted] leading-relaxed">
-              Each label identifies the object, its institutional context, and
-              the persuasive operation it performs.
+              Each object label includes accession-style metadata, archival
+              context, and a concise interpretive note.
             </p>
           </div>
 
@@ -138,6 +178,20 @@ export default function PostersExhibit() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      <div className="border-t border-[--rule] px-6 py-12 bg-[--paper]">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
+            Selected Source Context
+          </p>
+          <p className="text-sm text-[--muted] leading-relaxed max-w-3xl">
+            Object labels draw on Library of Congress and National Archives
+            metadata, Soviet poster catalog references, and civil-defense media
+            records. Accession numbers are exhibition catalog IDs for this
+            project's archival register.
+          </p>
         </div>
       </div>
 
