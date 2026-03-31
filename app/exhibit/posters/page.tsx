@@ -6,7 +6,7 @@ const posters = [
     origin: "US" as const,
     year: "1917 / reissued 1941",
     analysis:
-      "Originally created by James Montgomery Flagg, this poster was reissued throughout the Cold War period as a shorthand for national duty. The direct address — 'I Want You' — positions the state as a singular authority figure whose gaze follows the viewer, exploiting the psychological principle of direct eye contact to manufacture personal obligation.",
+      "Flagg's pointing figure converts the state into a personal authority speaking directly to the viewer. Its force lies in collapsing public duty into an individual summons.",
     imageLabel: "James M. Flagg / U.S. Army",
   },
   {
@@ -14,7 +14,7 @@ const posters = [
     origin: "USSR" as const,
     year: "1942",
     analysis:
-      "Soviet wartime production posters were systematically repurposed in early Cold War propaganda to reinforce the USSR's industrial mythology. This class of imagery depicted workers as heroic actors whose labor directly enabled military power — collapsing the distinction between civilian and combatant in service of total mobilization.",
+      "This production image turns labor into patriotic proof. The worker is presented not as an individual but as a disciplined instrument of state strength.",
     imageLabel: "TASS Windows Series",
   },
   {
@@ -22,7 +22,7 @@ const posters = [
     origin: "US" as const,
     year: "1943",
     analysis:
-      "Produced by the Office of War Information, this design depicts a German soldier through exaggerated, menacing features. The dehumanization strategy — consistent across both American and Soviet propaganda — functions to suspend moral reasoning in viewers, making violence against the abstracted 'enemy' psychologically permissible.",
+      "The poster relies on caricature to make the enemy legible at a glance. Once the opponent is reduced to a type, moral complexity becomes easier to discard.",
     imageLabel: "Office of War Information",
   },
   {
@@ -30,7 +30,7 @@ const posters = [
     origin: "US" as const,
     year: "1950",
     analysis:
-      "Distributed by anti-communist civic organizations in the early 1950s, this genre of American poster leveraged the visual language of public health campaigns — familiar, authoritative forms — to frame Soviet ideology as a contagion. The epidemiological metaphor implied that exposure alone was dangerous, naturalizing surveillance and suspicion.",
+      "American anti-communist poster design often borrowed the authority of public health messaging. Here ideology is treated as contamination, making vigilance appear rational and necessary.",
     imageLabel: "American Legion / Civil Defense",
   },
   {
@@ -38,7 +38,7 @@ const posters = [
     origin: "USSR" as const,
     year: "1950",
     analysis:
-      "Soviet 'peace' posters of the 1950s present a recurring paradox: bellicose imagery framed in pacifist language. The dove, borrowed from Picasso's design for the World Peace Council, was deployed state-wide to construct the USSR as the global defender of peace, juxtaposing this claim against U.S. nuclear tests and Korean War operations.",
+      "Soviet peace imagery framed the USSR as the guardian of world stability while preserving a militant visual grammar. The poster's persuasion lies in making state power appear synonymous with peace itself.",
     imageLabel: "Soviet Peace Committee",
   },
   {
@@ -46,7 +46,7 @@ const posters = [
     origin: "US" as const,
     year: "1951",
     analysis:
-      "Bert the Turtle's civil defense campaign represents a sophisticated institutionalization of fear as a governance tool. By training schoolchildren in a survival ritual of scientifically dubious utility, the program served a secondary function: to normalize the permanent presence of nuclear threat, rendering state authority indispensable in everyday life.",
+      "Presented as child-friendly instruction, this campaign normalized permanent nuclear anxiety. The lesson was not only survival procedure but habitual reliance on official guidance.",
     imageLabel: "Federal Civil Defense Administration",
   },
   {
@@ -54,7 +54,7 @@ const posters = [
     origin: "USSR" as const,
     year: "1941 / circulated 1960s",
     analysis:
-      "Irakli Toidze's iconic image of a Soviet woman holding aloft a conscription document — styled as the motherland herself — inverts conventional gender roles in service of mobilization. The figure's sightline directs the viewer off-frame toward an unseen threat, engineering a sense of imminent vulnerability intended to override individual hesitation.",
+      "Toidze's figure fuses nation, motherhood, and command into a single image. Authority is embodied rather than explained, giving mobilization the force of moral obligation.",
     imageLabel: "Irakli Toidze",
   },
   {
@@ -62,7 +62,7 @@ const posters = [
     origin: "US" as const,
     year: "1942",
     analysis:
-      "This poster class employs guilt as its primary mechanism — the rhetorical question implies a verdict before the viewer can respond. Distributed through workplaces and public transit, the campaign targeted adults in non-military roles, extending the logic of duty beyond battlefield service and framing inaction as a form of complicity.",
+      "The rhetorical question functions as a quiet accusation. Viewers are asked to measure themselves against national duty before they have a chance to refuse it.",
     imageLabel: "U.S. Government Printing Office",
   },
 ];
@@ -74,33 +74,66 @@ export default function PostersExhibit() {
       <div className="bg-[--ink] text-[--paper] px-6 py-20">
         <div className="max-w-6xl mx-auto">
           <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
-            Exhibit I — 1941 to 1975
+            Gallery I — Printed Persuasion, 1941 to 1975
           </p>
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none mb-8">
             The Paper War
           </h1>
           <div className="w-16 h-1 bg-[--red] mb-8" />
           <p className="max-w-2xl text-base text-[--paper]/80 leading-relaxed">
-            Before television saturated the domestic sphere, the poster was the
-            primary instrument of state visual rhetoric. Printed in mass
-            quantities, affixed to factory floors, transit stations, and
-            schoolroom walls, Cold War posters operated not merely as
-            advertising but as environmental conditioning — shaping the
-            emotional and ideological landscape of daily life on both sides of
-            the Iron Curtain.
+            Before television dominated the domestic sphere, the poster carried
+            ideology into streets, factories, schools, and transit systems.
+            This room considers the poster as an instrument of instruction:
+            concise, repeatable, and designed to make authority visible.
           </p>
         </div>
       </div>
 
-      {/* Gallery */}
+      <div className="border-b border-[--rule] px-6 py-12 bg-[--paper]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
+              Room Guide
+            </p>
+            <p className="text-sm text-[--muted] leading-relaxed max-w-xl">
+              Read these posters as systems of command. Note how each object
+              simplifies political conflict into legible roles: protector,
+              worker, enemy, citizen, child. The goal is not subtle argument but
+              immediate compliance.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs tracking-[0.25em] uppercase text-[--red] mb-4">
+              Interpretive Lens
+            </p>
+            <p className="text-sm text-[--muted] leading-relaxed max-w-xl">
+              Across both superpowers, authority is established through direct
+              address, institutional symbolism, and repeated visual hierarchy.
+              What changes is not the structure of persuasion, but the ideology
+              each state asks the viewer to inhabit.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs tracking-[0.25em] uppercase text-[--muted] mb-10">
-            8 Artifacts — Public Domain / Library of Congress
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[--rule]">
-            {posters.map((poster) => (
-              <div key={poster.title} className="bg-[--paper]">
+          <div className="flex flex-col gap-3 mb-10">
+            <p className="text-xs tracking-[0.25em] uppercase text-[--muted]">
+              Selected Objects — 8 Posters
+            </p>
+            <p className="max-w-2xl text-sm text-[--muted] leading-relaxed">
+              Each label identifies the object, its institutional context, and
+              the persuasive operation it performs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {posters.map((poster, index) => (
+              <div key={poster.title} className="flex flex-col gap-3">
+                <p className="text-[10px] tracking-[0.18em] uppercase text-[--muted]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
                 <ArtifactCard {...poster} />
               </div>
             ))}
@@ -108,21 +141,18 @@ export default function PostersExhibit() {
         </div>
       </div>
 
-      {/* Closing Note */}
       <div className="border-t border-[--rule] px-6 py-16 bg-[--ink] text-[--paper]">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-widest uppercase text-[--red] mb-4">
             Curatorial Note
           </p>
           <p className="text-base text-[--paper]/80 leading-relaxed">
-            By the mid-1970s, the propaganda poster as a primary vehicle of
-            state persuasion had largely given way to television advertising,
-            news management, and psychological operations conducted through
-            commercial media. The visual grammar it established — the heroic
-            figure, the binary enemy, the sacrificial demand — migrated intact
-            into broadcast, where it reached orders of magnitude more viewers
-            with exponentially greater frequency. The poster did not disappear.
-            It was absorbed.
+            By the mid-1970s, the poster was no longer the dominant vehicle of
+            state persuasion, but its visual logic endured. Broadcast media
+            inherited the same grammar of threat, duty, innocence, and command.
+            The room therefore serves as a prehistory of later information
+            systems: the medium changes, but the structure of persuasion
+            remains remarkably stable.
           </p>
         </div>
       </div>
